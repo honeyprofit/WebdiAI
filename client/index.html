@@ -10,38 +10,57 @@
   </head>
   <body>
     <h1>상품 페이지 생성기</h1>
-    <form id="product-form">
-      <label for="product-image">상품 이미지:</label>
-      <input type="file" id="product-image" accept="image/*" required />
 
-      <label for="product-name">상품명:</label>
-      <input type="text" id="product-name" required />
+    <label for="product-type">상품 종류 선택:</label>
+    <select id="product-type">
+      <option value="">선택하세요</option>
+      <option value="cosmetics">화장품</option>
+      <option value="fashion">패션</option>
+    </select>
 
-      <label for="ingredients">전성분:</label>
-      <textarea
-        id="ingredients"
-        placeholder="성분을 쉼표로 구분하여 입력하세요."
-        required
-      ></textarea>
+    <!-- 화장품 폼 -->
+    <div id="cosmetics-form" style="display: none">
+      <form id="product-form">
+        <label for="product-image">상품 이미지:</label>
+        <input type="file" id="product-image" accept="image/*" required />
 
-      <button type="submit">페이지 생성</button>
-    </form>
+        <label for="product-name">상품명:</label>
+        <input type="text" id="product-name" required />
 
-    <div id="preview" style="display: none">
-      <button id="download">Download as PNG</button>
-      <button id="download-pdf">Download as PDF</button>
-      <h2>미리보기</h2>
+        <label for="ingredients">전성분:</label>
+        <textarea
+          id="ingredients"
+          placeholder="성분을 쉼표로 구분하여 입력하세요."
+          required
+        ></textarea>
 
-      <!-- 출력할 내용을 article 태그로 감싸기 -->
-      <article id="output">
-        <img id="preview-image" src="" alt="상품 이미지" />
-        <h3 id="preview-name"></h3>
-        <h4>전성분:</h4>
-        <ul id="preview-ingredients"></ul>
-      </article>
+        <button type="submit">페이지 생성</button>
+      </form>
+
+      <div id="preview" style="display: none">
+        <button id="download">Download as PNG</button>
+        <button id="download-pdf">Download as PDF</button>
+        <h2>미리보기</h2>
+
+        <!-- 출력할 내용을 article 태그로 감싸기 -->
+        <article id="output">
+          <img id="preview-image" src="" alt="상품 이미지" />
+          <h3 id="preview-name"></h3>
+          <h4>전성분:</h4>
+          <ul id="preview-ingredients"></ul>
+        </article>
+      </div>
+    </div>
+
+    <!-- 패션 폼 (여기에 필요한 입력 필드를 추가하세요) -->
+    <div id="fashion-form" style="display: none">
+      <form id="fashion-product-form">
+        <label for="fashion-item">패션 아이템:</label>
+        <input type="text" id="fashion-item" required />
+        <button type="submit">패션 페이지 생성</button>
+      </form>
     </div>
 
     <script src="script.js"></script>
-    <!-- 나중에 JavaScript 로직을 추가할 수 있습니다. -->
   </body>
 </html>
