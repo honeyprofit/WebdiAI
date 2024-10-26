@@ -1,0 +1,17 @@
+{
+  "name": "webdiai",
+  "version": "1.0.0",
+  "description": "## 프로젝트 구조",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "multer": "^1.4.5-lts.1"
+  }
+}
